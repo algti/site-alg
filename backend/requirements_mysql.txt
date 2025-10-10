@@ -1,0 +1,33 @@
+# ALG Tech Hub - Dependências MySQL
+# Para usar com MySQL em vez de MongoDB
+
+# FastAPI e dependências
+fastapi==0.110.1
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# MySQL
+mysql-connector-python==8.3.0
+
+# Email e validação
+pydantic[email]==2.6.4
+email-validator==2.1.1
+
+# CORS
+starlette==0.37.2
+
+# Utilitários
+python-dateutil==2.9.0
+pytz==2024.1
+
+# Para migração (opcional)
+pymongo==4.6.3
+
+# Logging
+structlog==24.1.0
+
+# Desenvolvimento (opcional)
+pytest==8.1.1
+pytest-asyncio==0.23.6
+httpx==0.27.0
