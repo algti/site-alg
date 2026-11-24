@@ -43,6 +43,12 @@ const ClientCarousel = () => {
       logo: "/assets/logo-clientes/deline.png",
       width: 168,
       height: 96
+    },
+    {
+      name: "Mister Sabor",
+      logo: "/assets/logo-clientes/mister-sabor.png",
+      width: 168,
+      height: 96
     }
   ];
 
