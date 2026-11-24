@@ -1,5 +1,4 @@
 import React from 'react';
-import OptimizedImage from './OptimizedImage';
 
 const ClientCarousel = () => {
   const clients = [
@@ -60,7 +59,7 @@ const ClientCarousel = () => {
         </div>
 
         {/* Fixed height container to prevent layout shift */}
-        <div className="relative h-24 overflow-hidden">
+        <div className="relative h-28 overflow-hidden">
           <div className="client-carousel-track">
             {/* First set of logos */}
             <div className="client-carousel-set">
@@ -75,15 +74,7 @@ const ClientCarousel = () => {
                     minHeight: client.height
                   }}
                 >
-                  <OptimizedImage
-                    src={client.logo}
-                    alt={`Logo ${client.name}`}
-                    width={client.width}
-                    height={client.height}
-                    className="client-logo"
-                    priority={index < 3} // Preload first 3 images
-                    sizes="120px"
-                  />
+                  <img src={client.logo} alt={`Logo ${client.name}`} className="client-logo" loading="eager" decoding="async" />
                 </div>
               ))}
             </div>
@@ -101,14 +92,7 @@ const ClientCarousel = () => {
                     minHeight: client.height
                   }}
                 >
-                  <OptimizedImage
-                    src={client.logo}
-                    alt={`Logo ${client.name}`}
-                    width={client.width}
-                    height={client.height}
-                    className="client-logo"
-                    sizes="120px"
-                  />
+                  <img src={client.logo} alt={`Logo ${client.name}`} className="client-logo" loading="eager" decoding="async" />
                 </div>
               ))}
             </div>
