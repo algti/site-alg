@@ -29,6 +29,7 @@ const BudgetRequestForm = ({ onClose, onSuccess }) => {
     'Administração de TI',
     'Treinamentos',
     'Consultoria LGPD',
+    'Câmeras de Segurança - CFTV',
     'Segurança da Informação'
   ];
 

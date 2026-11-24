@@ -9,7 +9,8 @@ import {
   Settings, 
   GraduationCap, 
   Laptop, 
-  Shield 
+  Shield,
+  Cctv
 } from "lucide-react";
 import { useSEO } from '../hooks/useSEO';
 
@@ -117,6 +118,18 @@ const Services = () => {
         "Políticas de privacidade",
         "Treinamento de equipes",
         "Monitoramento contínuo"
+      ]
+    },
+    {
+      icon: <Cctv size={48} />,
+      title: "Câmeras de Segurança - CFTV",
+      description: "Projeto, instalação e manutenção de sistemas de videomonitoramento para proteger o patrimônio e as pessoas da sua empresa, com acesso às imagens em tempo real.",
+      features: [
+        "Projeto e instalação de câmeras IP e analógicas",
+        "Gravação em DVR/NVR",
+        "Monitoramento remoto pelo celular",
+        "Manutenção preventiva e corretiva",
+        "Integração com a rede da empresa"
       ]
     }
   ];

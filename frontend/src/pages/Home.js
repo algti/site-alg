@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Users, Award, Zap, Shield, Code, Network, HelpCircle, FileText, Mail, X, Calculator } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Award, Zap, Shield, Code, Network, HelpCircle, FileText, Mail, X, Calculator, Cctv } from 'lucide-react';
 import BudgetRequestForm from '../components/BudgetRequestForm';
 import NewsletterSignup from '../components/NewsletterSignup';
 import OptimizedImage from '../components/OptimizedImage';
@@ -29,6 +29,11 @@ const Home = () => {
       icon: <Users size={32} />,
       title: "Suporte Especializado",
       description: "Help desk dedicado e treinamentos para sua equipe dominar as ferramentas."
+    },
+    {
+      icon: <Cctv size={32} />,
+      title: "Câmeras de Segurança - CFTV",
+      description: "Videomonitoramento com instalação, manutenção e acesso remoto às imagens para proteger sua empresa."
     }
   ];
 
@@ -92,7 +97,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-3" style={{ marginTop: "80px" }}>
+          <div className="grid" style={{ marginTop: "80px", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
             {services.map((service, index) => (
               <div key={index} className="service-card dark-hover dark-transition">
                 <div className="service-icon" style={{ color: "var(--brand-primary)" }}>

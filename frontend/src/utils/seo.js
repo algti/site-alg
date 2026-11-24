@@ -41,6 +41,7 @@ export const seoConfig = {
       "Infraestrutura de Rede", 
       "Help Desk e Suporte",
       "Consultoria LGPD",
+      "Câmeras de Segurança - CFTV",
       "Segurança da Informação"
     ],
     foundingDate: "2020-01-01",
@@ -66,7 +67,7 @@ export const seoConfig = {
     
     services: {
       title: "Serviços de TI | Consultoria e Soluções Tecnológicas - ALG",
-      description: "Descubra nossos serviços: Consultoria em TI, Desenvolvimento de Software, Infraestrutura de Rede, Help Desk, LGPD e Segurança da Informação.",
+      description: "Descubra nossos serviços: Consultoria em TI, Desenvolvimento de Software, Infraestrutura de Rede, Help Desk, LGPD, Câmeras de Segurança (CFTV) e Segurança da Informação.",
       keywords: "serviços TI, consultoria, desenvolvimento software, infraestrutura, help desk, LGPD, segurança informação",
       canonical: "/servicos", 
       type: "website"

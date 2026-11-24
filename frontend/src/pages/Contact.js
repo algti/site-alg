@@ -31,6 +31,7 @@ const Contact = () => {
     "Administração de TI",
     "Treinamentos",
     "Consultoria LGPD",
+    "Câmeras de Segurança - CFTV",
     "Orçamento Personalizado",
     "Outros"
   ];

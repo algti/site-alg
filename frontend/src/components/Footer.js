@@ -39,6 +39,7 @@ const Footer = () => {
               <li>Help Desk</li>
               <li>Infraestrutura de Rede</li>
               <li>Consultoria LGPD</li>
+              <li>Câmeras de Segurança - CFTV</li>
             </ul>
           </div>
 
