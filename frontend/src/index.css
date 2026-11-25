@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import KodeMono font */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
 body {
     margin: 0;
     font-family: 'JetBrains Mono', 'Inter', system-ui, -apple-system, sans-serif;
@@ -143,34 +140,6 @@ code {
   position: relative;
 }
 
-.modal-content.newsletter-modal {
-  max-width: 500px;
-}
-
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  font-size: 24px;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-  z-index: 10;
-}
-
-.modal-close:hover {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-}
-
 /* Budget Form Styles */
 .budget-form-container {
   padding: 40px;
@@ -200,16 +169,14 @@ code {
   color: var(--brand-primary);
 }
 
-.services-grid,
-.interests-grid {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   margin-top: 12px;
 }
 
-.service-checkbox,
-.interest-checkbox {
+.service-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -221,14 +188,12 @@ code {
   font-size: 14px;
 }
 
-.service-checkbox:hover,
-.interest-checkbox:hover {
+.service-checkbox:hover {
   border-color: var(--brand-primary);
   background: var(--brand-hover);
 }
 
-.service-checkbox input,
-.interest-checkbox input {
+.service-checkbox input {
   margin: 0;
   width: auto;
 }
@@ -251,56 +216,12 @@ code {
     flex-direction: column;
   }
   
-  .services-grid,
-  .interests-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Newsletter Styles */
-.newsletter-signup {
-  padding: 40px;
-  text-align: center;
-}
-
-.newsletter-header {
-  margin-bottom: 32px;
-}
-
-.newsletter-header h3 {
-  margin: 16px 0 8px;
-}
-
-.newsletter-form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.newsletter-submit {
-  width: 100%;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.newsletter-disclaimer {
-  font-size: 12px;
-  color: var(--text-muted);
-  text-align: center;
-  margin-top: 16px;
-  line-height: 1.4;
-}
-
-.newsletter-success {
-  padding: 40px;
-  text-align: center;
-}
-
-.newsletter-success h3 {
-  margin: 16px 0 8px;
-  color: var(--brand-primary);
-}
 
 /* Contact Form Styles */
 .contact-form {
@@ -603,43 +524,6 @@ code {
 }
 
 /* Clients Section Styles */
-.clients-section {
-  padding: 100px 0;
-  background: rgba(255, 255, 255, 0.02);
-  overflow: hidden;
-}
-
-.clients-carousel {
-  width: 100%;
-  overflow: hidden;
-  mask: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-}
-
-.clients-track {
-  display: flex;
-  gap: 60px;
-  animation: scroll-left 30s linear infinite;
-  width: calc(380px * 14); /* 14 items total (7 original + 7 duplicated) */
-}
-
-.clients-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-380px * 7)); /* Move by width of 7 original items */
-  }
-}
 
 .client-logo-item {
   display: flex;
@@ -822,183 +706,6 @@ code {
 }
 
 /* Blog Page Styles */
-.blog-hero {
-  padding: 160px 0 100px;
-  text-align: center;
-}
-
-.featured-article {
-  padding: 100px 0;
-}
-
-.featured-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 60px;
-  text-align: center;
-}
-
-.featured-badge {
-  display: inline-block;
-  background: rgba(0, 255, 209, 0.1);
-  color: #00FFD1;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 24px;
-  border: 1px solid rgba(0, 255, 209, 0.3);
-}
-
-.article-meta {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.category-filter {
-  padding: 60px 0;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.filter-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.filter-tab {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.7);
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
-
-.filter-tab:hover,
-.filter-tab.active {
-  background: rgba(0, 255, 209, 0.1);
-  border-color: #00FFD1;
-  color: #00FFD1;
-}
-
-.articles-grid {
-  padding: 100px 0;
-}
-
-.article-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.article-image {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.article-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.article-category {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #00FFD1;
-  padding: 6px 12px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.article-content {
-  padding: 32px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.article-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  padding-top: 24px;
-}
-
-.read-time {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-}
-
-.read-more {
-  background: none;
-  border: none;
-  color: #00FFD1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.read-more:hover {
-  color: #FFFFFF;
-}
-
-.newsletter-cta {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.newsletter-input {
-  flex: 1;
-  min-width: 250px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
-  padding: 16px 20px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.newsletter-input:focus {
-  border-color: #00FFD1;
-}
-
-.newsletter-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
 
 /* Contact Page Styles */
 .contact-hero {
@@ -1204,14 +911,6 @@ code {
     text-align: center;
   }
   
-  .newsletter-form {
-    flex-direction: column;
-  }
-  
-  .newsletter-input {
-    min-width: 100%;
-  }
-  
   .contact-detail-item {
     flex-direction: column;
     text-align: center;
@@ -1220,21 +919,6 @@ code {
   .stats-container {
     flex-direction: row;
     justify-content: space-around;
-  }
-  
-  .clients-track {
-    gap: 30px;
-    animation: scroll-left-mobile 25s linear infinite;
-    width: calc(200px * 14); /* Smaller width for mobile */
-  }
-  
-  @keyframes scroll-left-mobile {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-200px * 7));
-    }
   }
   
 }
@@ -1266,5 +950,67 @@ code {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Page transition */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-fade {
+  animation: page-fade-in 0.35s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-fade {
+    animation: none;
+  }
+}
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1100;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: rgba(18, 18, 18, 0.97);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.cookie-banner a {
+  color: var(--brand-primary);
+  text-decoration: underline;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-banner-actions button {
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .cookie-banner-actions {
+    justify-content: flex-end;
   }
 }

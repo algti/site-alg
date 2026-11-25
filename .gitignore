@@ -30,7 +30,16 @@ next-env.d.ts
 dist/
 dist
 
-# Environment files (comprehensive coverage)
+# Environment files (segredos nunca devem ir para o git)
+.env
+.env.*
+!.env.example
+!frontend/.env.production
+
+# Builds
+frontend/build/
+frontend/dist/
+*.log
 
 *token.json*
 *credentials.json*
@@ -78,3 +87,5 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ 
+# Vite SSR (pré-renderização)
+frontend/.ssr-build/
